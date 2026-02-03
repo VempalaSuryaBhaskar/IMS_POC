@@ -43,6 +43,12 @@ const verifyToken = async (token) => {
 
 // Auth middleware to protect routes
 const authMiddleware = async (req, res, next) => {
+
+  // allow this endpoint without auth
+  if (req.path === "/addDefaultAdmin") {
+    return next();
+  }
+
   try {
     const authHeader = req.headers.authorization;
     const token = authHeader?.split(" ")[1];

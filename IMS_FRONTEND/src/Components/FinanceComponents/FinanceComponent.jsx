@@ -1,13 +1,13 @@
 import React from "react";
 import "../../Styles/DashBoardComponentCss/DashBoard.css";
-import logo from "../../assets/DashBoard.png";
+import logo from "../../assets/Finance.png";
 
-export default function Dashboard() {
+export default function FinanceComponent() {
   return (
     <div className="dashboard">
       <div className="dashboard-item">
         {/* Dummy Image for UnderStanding How DashBoards Look on this screen */}
-        <img src={logo} alt="DashBoard Demo" className="dashboard-image" />
+        <img src={logo} alt="Finance Demo" className="dashboard-image" />
 
         <h2>Welcome To Jen Veda</h2>
         <p>

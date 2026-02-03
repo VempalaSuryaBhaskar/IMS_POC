@@ -10,6 +10,7 @@ const User = require("./Schemas/User");
 const BrachRoutes = require("./Routes/BranchRoutes");
 const MddpRoutes = require("./Routes/MddpRoutes");
 const CustomerOrderRouter = require("./Routes/CustomerOrderRoutes");
+const { createNewDefaultAdminUser } = require("./Controllers/UserController");
 
 //DB Connection 
 connectDB();
@@ -25,6 +26,8 @@ app.use(cors());
 app.get("/", (req, res) => {
     res.json("Hello World!");
 });
+
+
 
 //Non Protected Routes
 app.use("/api/auth", require("./Routes/AuthRoutes"));
@@ -46,49 +49,12 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.get("/checkpoint", async (req, res) => {
+//This Route Add Default Admin User
+app.post("/addDefaultAdmin", async (req, res) => {
     const defaultUser = {
-        username: "john_doe",
-        password: "password123", // will be hashed by pre-save hook
-        email: "john.doe@example.com",
+        username: "admin",
+        password: "Password123", // will be hashed by pre-save hook
+        email: "admin@example.com",
         phone: "9876543211",
         role: "Admin",
         createdBy: "system",

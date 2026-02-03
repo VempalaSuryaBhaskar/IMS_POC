@@ -6,21 +6,64 @@
   height: calc(100vh - 60px);
   text-align: center;
   padding: 20px;
+  margin-top: 5%;
 }
 
+/* .dashboard-item {
+  max-width: 1000px;
+  text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+} */
+
+
 .dashboard-image {
-  max-width: 400px;
-  width: 80%;
+  max-width: 100%;
+  max-height: 85vh;      /* key line: fits inside screen */
+  height: auto;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 20px;
 }
 
-h2 {
-  margin-bottom: 10px;
-  font-weight: 700;
+.dashboard h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  display: none;
 }
 
-p {
+.dashboard p {
   max-width: 600px;
-  color: #555;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: none;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .dashboard-image {
+    display: none;
+  }
+
+  .dashboard h2, .dashboard p {
+    display: block;
+  }
+  .dashboard {
+    margin-top: 0%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .dashboard-image {
+    display: none;
+  }
+
+  .dashboard-item h2 {
+    font-size: 1.3rem;
+  }
+
+  .dashboard-item p {
+    font-size: 0.95rem;
+  }
 }

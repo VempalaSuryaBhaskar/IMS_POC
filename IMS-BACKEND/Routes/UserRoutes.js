@@ -19,5 +19,6 @@ router.delete("/:id", checkPermission("manageUsers", "Delete"),deleteUser);
 // ADVANCE CHECK FOR DUPLICATES
 router.post("/advanceCheck",advanceCheck);
 
+
 module.exports = router;
 

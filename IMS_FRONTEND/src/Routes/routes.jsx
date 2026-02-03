@@ -9,6 +9,7 @@ import MddpManagement from '../Components/MddpComponents/MddpManagement'
 import ManageUsers from '../Components/AuthComponents/ManageUsers'
 import CustomerOrders from '../Components/OrderComponents/CustomerOrders'
 import DashBoard from "../Components/DashBoradComponents/DashBorad"
+import FinanceComponent from '../Components/FinanceComponents/FinanceComponent'
 
 export default function routes() {
 
@@ -22,7 +23,8 @@ export default function routes() {
                 { path: '/Vehicles', element: <VehicleManagement /> },
                 { path: '/Mddps', element: <MddpManagement /> },
                 { path: '/ManageUsers', element: <ManageUsers /> },
-                { path: '/CustomerOrders', element: <CustomerOrders /> }
+                { path: '/CustomerOrders', element: <CustomerOrders /> },
+                {path: '/Finance', element: <FinanceComponent />}
             ],
         },
         {

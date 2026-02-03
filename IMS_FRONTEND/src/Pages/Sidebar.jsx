@@ -19,7 +19,7 @@ export default function Sidebar() {
     { icon: "fa-warehouse", label: "Vehicle Management", route: "/Vehicles" },
     { icon: "fa-house", label: "Mddp", route: "/Mddps" },
     { icon: "fa-truck", label: "Customer Orders", route: "/CustomerOrders" },
-    { icon: "fa-piggy-bank", label: "Finance", route: "/" },
+    { icon: "fa-piggy-bank", label: "Finance", route: "/Finance" },
     // { icon: "fa-truck", label: "Manage Branches" },
     { icon: "fa-user-gear", label: "Manage Users", route: "/ManageUsers" },
   ];

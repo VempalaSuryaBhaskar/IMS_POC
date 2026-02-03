@@ -3,7 +3,6 @@ const logger = require("../Utilities/logging");
 const User = require("../Schemas/User");
 
 
-
 const getAllUsers = async (req, res) => {
     try {
         const { username } = req?.user; // logged-in user info
@@ -19,6 +18,10 @@ const getAllUsers = async (req, res) => {
         res.status(500).json({ message: "Failed to fetch users" });
     }
 }
+
+
+
+
 
 
 
@@ -89,6 +92,12 @@ const createNewUser = async (req, res) => {
 }
 
 
+
+
+
+
+
+
 const updateUser = async (req, res) => {
     const { id } = req.params;
     const userObj = req?.user;
@@ -133,6 +142,15 @@ const updateUser = async (req, res) => {
 }
 
 
+
+
+
+
+
+
+
+
+
 const deleteUser = async (req, res) => {
     const { id } = req.params;
     const userObj = req?.user;
@@ -168,6 +186,15 @@ const deleteUser = async (req, res) => {
         res.status(500).json({ message: "Failed to delete user", error });
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 const advanceCheck = async (req, res) => {
@@ -206,11 +233,10 @@ const advanceCheck = async (req, res) => {
 }
 
 
-
 module.exports = {
     getAllUsers,
     createNewUser,
     updateUser,
     deleteUser,
-    advanceCheck
+    advanceCheck,
 }
