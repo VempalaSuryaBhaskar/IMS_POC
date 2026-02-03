@@ -1,0 +1,265 @@
+.login {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Login Card --- */
+.login-card {
+  background: white;
+  width: 500px;
+  border-radius: 10px;
+  padding: 50px 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Header --- */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 35px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-dropdown {
+  border: none;
+  background: #f3f3f3;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.switch-btn {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+/* --- Tenant Section --- */
+.tenant-section {
+  margin-top: 20px;
+}
+
+.tenant-label {
+  font-size: 13px;
+  color: gray;
+}
+
+.tenant-value {
+  color: #0071e3;
+  font-weight: bold;
+}
+
+/* --- Title --- */
+.login-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* --- Form --- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group span {
+  color: red;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  cursor: pointer;
+  color: gray;
+}
+
+/* --- Options --- */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* --- Login Button --- */
+.login-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #333;
+}
+
+/* --- Footer --- */
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.jenveda-logo {
+  margin-bottom: 50px;
+}
+
+/* Responsive designs */
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .login-card {
+    width: 420px;
+    padding: 40px 50px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+
+  .input-box {
+    padding: 9px;
+  }
+
+  .lang-dropdown,
+  .switch-btn {
+    font-size: 13px;
+  }
+}
+
+/* Medium Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .login-card {
+    width: 80%;
+    padding: 35px 40px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .tenant-value {
+    font-size: 14px;
+  }
+
+  .options {
+    font-size: 12px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .login-title {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .input-box {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .password-field i {
+    right: 10px;
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .footer-text {
+    font-size: 11px;
+  }
+
+  .lang-switch {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+}
+
+/* error-msgs */
+.error-text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.input-error {
+  border-color: #e74c3c !important;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #aaa;
+}
